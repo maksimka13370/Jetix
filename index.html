@@ -24,70 +24,70 @@
         <section class="player-section">
             <div class="player-wrapper">
                 <div class="player-frame">
-                    <!-- Нативный плеер браузера, который играет чистый видеофайл без Дзена и Ютуба -->
+                    <!-- Родной плеер, играющий чистые, быстрые mp4-ссылки -->
                     <video id="mainPlayer" controls autoplay preload="auto">
-                        <source id="videoSource" src="https://archive.org" type="video/mp4">
-                        Ваш браузер не поддерживает видео.
+                        <source id="videoSource" src="https://zencdn.net" type="video/mp4">
+                        Ваш browser не поддерживает видео.
                     </video>
                 </div>
             </div>
             <div class="player-info">
-                <h2 id="currentVideoTitle">¿ Что с Энди ? — 1 Серия (Маскарад)</h2>
-                <p id="currentVideoDesc">Легендарные проделки и розыгрыши Энди Ларкина в Ист-Гекле. Видео играет напрямую с сервера! Чтобы переключить мультфильм, кликай по карточкам в каталоге ниже.</p>
+                <h2 id="currentVideoTitle">📺 Главный Экран Jetix TV</h2>
+                <p id="currentVideoDesc">Добро пожаловать в наш личный ностальгический кинотеатр! Чтобы запустить любимый мультсериал нашего детства, просто кликайте по карточкам в каталоге ниже!</p>
             </div>
         </section>
 
         <!-- Раздел каталога мультиков -->
         <section id="catalog-section" class="section-padding">
-            <h2 class="section-title">Твоя секретная медиатека Jetix</h2>
+            <h2 class="section-title">Выбери мультфильм для брата</h2>
             
             <div class="series-grid">
-                <!-- Карточка 1: Что с Энди? (Прямой MP4 файл) -->
-                <div class="series-card" onclick="changeVideo('https://archive.org', '¿ Что с Энди ? — 1 Серия (Маскарад)', 'Включай первую серию про главного шутника нашего детства прямо здесь!')">
-                    <div class="card-image-fallback" style="background: linear-gradient(135deg, #cc0066, #ff007f);">¿ЭНДИ?</div>
-                    <div class="series-badge">Комедия</div>
-                    <div class="card-info">
-                        <h3>What's with Andy?</h3>
-                        <p>Нажми для запуска серии прямо в плеере выше.</p>
-                    </div>
-                </div>
-
-                <!-- Карточка 2: Человек-Паук (Прямой MP4 файл) -->
-                <div class="series-card" onclick="changeVideo('https://archive.org', 'Человек-Паук (1994) — 1 Серия', 'Тот самый культовый Человек-Паук в оригинальном дубляже Jetix!')">
-                    <div class="card-image-fallback" style="background: linear-gradient(135deg, #cc0000, #0033cc);">SPIDER-MAN</div>
-                    <div class="series-badge">Экшен</div>
-                    <div class="card-info">
-                        <h3>Spider-Man</h3>
-                        <p>Легендарный мультсериал 90-х годов.</p>
-                    </div>
-                </div>
-
-                <!-- Карточка 3: Наруто (Прямой MP4 файл) -->
-                <div class="series-card" onclick="changeVideo('https://archive.org', 'Наруто — 1 Серия (Озвучка Jetix)', 'Самое начало пути Наруто Удзумаки в дубляже нашего детства!')">
+                <!-- Карточка 1: Наруто -->
+                <div class="series-card" onclick="changeVideo('https://googleapis.com', 'Наруто — 1 Серия', 'Включай первую серию культового аниме-сериала в оригинальной озвучке Jetix прямо здесь!')">
                     <div class="card-image-fallback" style="background: linear-gradient(135deg, #ff6600, #ffcc00);">NARUTO</div>
                     <div class="series-badge">Аниме</div>
                     <div class="card-info">
-                        <h3>Naruto</h3>
-                        <p>Первая серия культового аниме-сериала.</p>
+                        <h3>Наруто (Jetix)</h3>
+                        <p>Нажми для мгновенного запуска серии в плеере выше.</p>
                     </div>
                 </div>
 
-                <!-- Карточка 4: Вуншпунш (Прямой MP4 файл) -->
-                <div class="series-card" onclick="changeVideo('https://archive.org', 'Вуншпунш — 1 Серия', 'Бубоник и Тирания пытаются наложить заклятие, а Мяурицио и Якоб спасают город!')">
+                <!-- Карточка 2: Что с Энди? -->
+                <div class="series-card" onclick="changeVideo('https://googleapis.com', '¿ Что с Энди ? — 1 Серия (Маскарад)', 'Тот самый первый эпизод проделок Энди Ларкина в Ист-Гекле. Смотрим прямо на сайте!')">
+                    <div class="card-image-fallback" style="background: linear-gradient(135deg, #cc0066, #ff007f);">¿ЭНДИ?</div>
+                    <div class="series-badge">Комедия</div>
+                    <div class="card-info">
+                        <h3>Что с Энди?</h3>
+                        <p>Легендарные розыгрыши главного шутника Jetix.</p>
+                    </div>
+                </div>
+
+                <!-- Карточка 3: Человек-Паук -->
+                <div class="series-card" onclick="changeVideo('https://googleapis.com', 'Человек-Паук (1994) — 1 Серия (Ночь Ящерицы)', 'Культовый Паук из 90-х в оригинальном дубляже. Моментальный запуск!')">
+                    <div class="card-image-fallback" style="background: linear-gradient(135deg, #cc0000, #0033cc);">SPIDER-MAN</div>
+                    <div class="series-badge">Экшен</div>
+                    <div class="card-info">
+                        <h3>Человек-Паук</h3>
+                        <p>Приключения Питера Паркера со встроенным плеером.</p>
+                    </div>
+                </div>
+
+                <!-- Карточка 4: Вуншпунш -->
+                <div class="series-card" onclick="changeVideo('https://googleapis.com', 'Вуншпунш — 1 Серия (Черная панк-магия)', 'Бубоник и Тирания пытаются наложить заклятие, а Мяурицио и Якоб спасают город!')">
                     <div class="card-image-fallback" style="background: linear-gradient(135deg, #660099, #4a0072);">WUNSHPUNSH</div>
                     <div class="series-badge">Магия</div>
                     <div class="card-info">
-                        <h3>Wunshpunsh</h3>
-                        <p>Колдовство, кошачьи миссии и ностальгия.</p>
+                        <h3>Вуншпунш</h3>
+                        <p>Колдовство, кошачьи миссии и любимая песня.</p>
                     </div>
                 </div>
 
-                <!-- Карточка 5: Детки из класса 402 (Прямой MP4 файл) -->
-                <div class="series-card" onclick="changeVideo('https://archive.org', 'Детки из класса 402 — 1 Серия', 'Школьные приключения Нэнси, Джесси, Полли и Артура.')">
+                <!-- Карточка 5: Детки из класса 402 -->
+                <div class="series-card" onclick="changeVideo('https://googleapis.com', 'Детки из класса 402 — 1 Серия', 'Школьные приключения Нэнси, Джесси, Полли и Артура.')">
                     <div class="card-image-fallback" style="background: linear-gradient(135deg, #0052cc, #002b80);">КЛАСС 402</div>
                     <div class="series-badge">Школа</div>
                     <div class="card-info">
-                        <h3>The Kids from Room 402</h3>
+                        <h3>Класс 402</h3>
                         <p>Уморительный сериал про школьные будни.</p>
                     </div>
                 </div>
@@ -102,10 +102,11 @@
     </footer>
 
     <script>
-        const defaultUrl = "https://archive.org";
+        const defaultUrl = "https://zencdn.net";
 
         function switchToDefault() {
-            changeVideo(defaultUrl, '¿ Что с Энди ? — 1 Серия (Маскарад)', 'Ты смотришь легендарные проделки и розыгрыши Энди Ларкина! Мультфильм играет прямо здесь. Чтобы переключить сериал, кликай по карточкам в каталоге ниже.');
+            changeVideo(defaultUrl, '📺 Главный Экран Jetix TV', 'Добро пожаловать в наш личный ностальгический кинотеатр! Чтобы запустить любимый мультсериал нашего детства, просто кликайте по карточкам в каталоге ниже!');
+            document.getElementById('mainPlayer').pause(); // Ставим на паузу стартовое видео
             document.querySelector('.nav-btn').classList.add('active');
         }
 
@@ -114,8 +115,15 @@
             const source = document.getElementById('videoSource');
             
             source.src = url;
-            player.load(); // Перезагружаем нативный плеер
-            player.play().catch(e => console.log("Браузер требует клика для автозапуска"));
+            player.load(); // Перезагружаем видео-поток
+            
+            // Запускаем видео
+            const playPromise = player.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Автозапуск заблокирован, нужен клик пользователя по плееру");
+                });
+            }
             
             document.getElementById('currentVideoTitle').innerText = title;
             document.getElementById('currentVideoDesc').innerText = description;
