@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetix TV — Главный канал детства</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">JETIX<span>.TV</span></div>
+            <nav>
+                <button class="nav-btn active" onclick="switchToLive()">🔴 Прямой эфир</button>
+                <a href="#catalog-section" class="nav-link">Мультсериалы</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Секция главного плеера -->
+        <section class="player-section">
+            <div class="player-wrapper">
+                <div class="player-frame">
+                    <!-- Сюда подгружается плеер YouTube -->
+                    <iframe id="mainPlayer" src="https://youtube.com" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="player-info">
+                <h2 id="currentVideoTitle">📺 Прямой эфир JETIX 24/7</h2>
+                <p id="currentVideoDesc">Ты смотришь круглосуточную трансляцию любимых мультфильмов нашего детства. Чтобы выбрать конкретный мультик, прокрути страницу вниз к каталогу!</p>
+            </div>
+        </section>
+
+        <!-- Раздел каталога мультиков вне трансляции -->
+        <section id="catalog-section" class="section-padding">
+            <h2 class="section-title">Выбери мультфильм (Вне трансляции)</h2>
+            
+            <div class="series-grid">
+                <!-- Карточка 1: Что с Энди? -->
+                <div class="series-card" onclick="changeVideo('https://youtube.com', 'Что с Энди? (Все серии)', 'Легендарные проделки и розыгрыши Энди Ларкина в Ист-Гекле. Включай и ностальгируй!')">
+                    <img src="https://unsplash.com" alt="Что с Энди?">
+                    <div class="series-badge">Комедия</div>
+                    <h3>Что с Энди?</h3>
+                </div>
+
+                <!-- Карточка 2: Шаман Кинг -->
+                <div class="series-card" onclick="changeVideo('https://youtube.com', 'Шаман Кинг (Все серии)', 'Взгляни вокруг, оглянись назад... Приключения Йо Асакуры и его духа Амидамару на турнире шаманов!')">
+                    <img src="https://unsplash.com" alt="Шаман Кинг">
+                    <div class="series-badge">Аниме</div>
+                    <h3>Шаман Кинг</h3>
+                </div>
+
+                <!-- Карточка 3: Вуншпунш -->
+                <div class="series-card" onclick="changeVideo('https://youtube.com', 'Вуншпунш (Все серии)', 'Мяурицио и Якоб спасают город от безумных и комичных заклинаний злых колдунов Бубоника и Тирании.')">
+                    <img src="https://unsplash.com" alt="Вуншпунш">
+                    <div class="series-badge">Магия</div>
+                    <h3>Вуншпунш</h3>
+                </div>
+
+                <!-- Карточка 4: Жизнь с Луи -->
+                <div class="series-card" onclick="changeVideo('https://youtube.com', 'Жизнь с Луи (Все серии)', 'Трогательные, уморительные и жизненные истории из детства маленького Луи Андерсона и его незабываемого отца.')">
+                    <img src="https://unsplash.com" alt="Жизнь с Луи">
+                    <div class="series-badge">Семейный</div>
+                    <h3>Жизнь с Луи</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p>Jetix TV Portal © 2026. Сайт создан исключительно в ностальгических и развлекательных целях.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Ссылка на твою прямую трансляцию
+        const liveEmbedUrl = "https://youtube.com";
+
+        // Функция переключения на эфир
+        function switchToLive() {
+            document.getElementById('mainPlayer').src = liveEmbedUrl;
+            document.getElementById('currentVideoTitle').innerText = "📺 Прямой эфир JETIX 24/7";
+            document.getElementById('currentVideoDesc').innerText = "Ты смотришь круглосуточную трансляцию любимых мультфильмов нашего детства. Чтобы выбрать конкретный мультик, прокрути страницу вниз к каталогу!";
+            
+            // Активируем кнопку в шапке
+            document.querySelector('.nav-btn').classList.add('active');
+        }
+
+        // Функция выбора конкретного мультика (подгружает плейлисты)
+        function changeVideo(embedUrl, title, description) {
+            document.getElementById('mainPlayer').src = embedUrl + "&autoplay=1";
+            document.getElementById('currentVideoTitle').innerText = title;
+            document.getElementById('currentVideoDesc').innerText = description;
+            
+            // Выключаем статус "активного эфира" у кнопки в шапке
+            document.querySelector('.nav-btn').classList.remove('active');
+            
+            // Скроллим плавно к плееру, чтобы сразу начать просмотр
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
