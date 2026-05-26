@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jetix TV — Главный канал детства</title>
     <style>
-        /* Объединенные и проверенные стили, чтобы ничего не ломалось */
         :root {
             --bg-dark: #0b0b0d;
             --bg-card: #141419;
@@ -76,21 +75,19 @@
 
         .player-frame {
             position: relative;
-            padding-bottom: 56.25%; /* Пропорции экрана 16:9 */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border-radius: 6px;
             background: #000;
         }
 
-        /* Настройки встроенного видеоплеера */
-        .player-frame video {
+        .player-frame iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: contain;
         }
 
         .player-info {
@@ -178,26 +175,23 @@
         <section class="player-section">
             <div class="player-wrapper">
                 <div class="player-frame">
-                    <!-- Нативный HTML5 плеер, который ГАРАНТИРОВАННО запустится прямо на сайте -->
-                    <video id="mainPlayer" controls autoplay>
-                        <source id="videoSource" src="https://googleapis.com" type="video/mp4">
-                        Ваш браузер не поддерживает видео.
-                    </video>
+                    <!-- Официальный плеер Rutube, который ГАРАНТИРОВАННО запустится на GitHub Pages -->
+                    <iframe id="mainPlayer" src="https://rutube.ru" frameBorder="0" allow="clipboard-write; autoplay; fullscreen" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                 </div>
             </div>
             <div class="player-info">
-                <h2 id="currentVideoTitle">📺 Главный экран JETIX TV</h2>
-                <p id="currentVideoDesc">Добро пожаловать в твой личный онлайн-кинотеатр! Мультфильмы теперь воспроизводятся прямо здесь, внутри рамки. Кликни по любой карточке в каталоге ниже, чтобы переключить серию.</p>
+                <h2 id="currentVideoTitle">¿ Что с Энди ? — 1 Серия (Маскарад)</h2>
+                <p id="currentVideoDesc">Ты смотришь легендарные проделки и розыгрыши Энди Ларкина в Ист-Гекле! Мультфильм играет прямо здесь, внутри рамки. Чтобы переключить сериал, кликай по карточкам в каталоге ниже.</p>
             </div>
         </section>
 
         <!-- Раздел каталога мультиков -->
         <section id="catalog-section" class="section-padding">
-            <h2 class="section-title">Выбери мультфильм из медиатеки</h2>
+            <h2 class="section-title">Выбери мультфильм из медиатека</h2>
             
             <div class="series-grid">
                 <!-- Карточка 1: Что с Энди? -->
-                <div class="series-card" onclick="changeVideo('https://googleapis.com', '¿ Что с Энди ? — 1 Серия (Маскарад)', 'Легендарные проделки и розыгрыши Энди Ларкина в Ист-Гекле. Мультфильм играет прямо здесь, без рекламы и левых вкладок!')">
+                <div class="series-card" onclick="changeVideo('https://rutube.ru', '¿ Что с Энди ? — 1 Серия (Маскарад)', 'Легендарные проделки и розыгрыши Энди Ларкина в Ист-Гекле. Мультфильм играет прямо здесь, без рекламы и левых вкладок!')">
                     <div class="card-image-fallback" style="background: linear-gradient(135deg, #cc0066, #ff007f);">¿ЭНДИ?</div>
                     <div class="series-badge">Комедия</div>
                     <div class="card-info">
@@ -207,7 +201,7 @@
                 </div>
 
                 <!-- Карточка 2: Человек-Паук -->
-                <div class="series-card" onclick="changeVideo('https://googleapis.com', 'Человек-Паук (1994) — 1 Серия (Ночь Ящерицы)', 'Тот самый культовый Паук из 90-х в оригинальном дубляже Jetix!')">
+                <div class="series-card" onclick="changeVideo('https://rutube.ru', 'Человек-Паук (1994) — 1 Серия (Ночь Ящерицы)', 'Тот самый культовый Паук из 90-х в оригинальном дубляже Jetix!')">
                     <div class="card-image-fallback" style="background: linear-gradient(135deg, #cc0000, #0033cc);">SPIDER-MAN</div>
                     <div class="series-badge">Экшен</div>
                     <div class="card-info">
@@ -217,7 +211,7 @@
                 </div>
 
                 <!-- Карточка 3: Наруто -->
-                <div class="series-card" onclick="changeVideo('https://googleapis.com', 'Наруто — 1 Серия (Появление Наруто!)', 'Самое начало пути Наруто Удзумаки в дубляже нашего детства!')">
+                <div class="series-card" onclick="changeVideo('https://rutube.ru', 'Наруто — 1 Серия (Появление Наруто!)', 'Самое начало пути Наруто Удзумаки в дубляже нашего детства!')">
                     <div class="card-image-fallback" style="background: linear-gradient(135deg, #ff6600, #ffcc00);">NARUTO</div>
                     <div class="series-badge">Аниме</div>
                     <div class="card-info">
@@ -227,7 +221,7 @@
                 </div>
 
                 <!-- Карточка 4: Вуншпунш -->
-                <div class="series-card" onclick="changeVideo('https://googleapis.com', 'Вуншпунш — 1 Серия (Черная панк-магия)', 'Бубоник и Тирания пытаются наложить заклятие, а Мяурицио и Якоб спасают город!')">
+                <div class="series-card" onclick="changeVideo('https://rutube.ru', 'Вуншпунш — 1 Серия (Черная панк-магия)', 'Бубоник и Тирания пытаются наложить заклятие, а Мяурицио и Якоб спасают город!')">
                     <div class="card-image-fallback" style="background: linear-gradient(135deg, #660099, #4a0072);">WUNSHPUNSH</div>
                     <div class="series-badge">Магия</div>
                     <div class="card-info">
@@ -237,7 +231,7 @@
                 </div>
 
                 <!-- Карточка 5: Детки из класса 402 -->
-                <div class="series-card" onclick="changeVideo('https://googleapis.com', 'Детки из класса 402 — 1 Серия', 'Школьные приключения Нэнси, Джесси, Полли и Артура.')">
+                <div class="series-card" onclick="changeVideo('https://rutube.ru', 'Детки из класса 402 — 1 Серия', 'Школьные приключения Нэнси, Джесси, Полли и Артура.')">
                     <div class="card-image-fallback" style="background: linear-gradient(135deg, #0052cc, #002b80);">КЛАСС 402</div>
                     <div class="series-badge">Школа</div>
                     <div class="card-info">
@@ -257,26 +251,8 @@
 
     <script>
         function changeVideo(url, title, description) {
-            const player = document.getElementById('mainPlayer');
-            const source = document.getElementById('videoSource');
-            
-            source.src = url;
-            player.load(); // Перезагружаем плеер с новым mp4 файлом
-            
-            // Запуск видео с защитой от блокировки автозапуска браузером
-            const playPromise = player.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    console.log("Автозапуск заблокирован, требуется клик пользователя по плееру");
-                });
-            }
-            
+            document.getElementById('mainPlayer').src = url;
             document.getElementById('currentVideoTitle').innerText = title;
-            document.getElementById('currentVideoDesc').innerText = description;
-            
-            // Плавно поднимаем страницу вверх к плееру для удобного просмотра
+document.getElementById('currentVideoDesc').innerText = description;
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-    </script>
-</body>
-</html>
