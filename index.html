@@ -24,16 +24,13 @@
         <section class="player-section">
             <div class="player-wrapper">
                 <div class="player-frame">
-                    <!-- Родной плеер, играющий чистые, быстрые mp4-ссылки -->
-                    <video id="mainPlayer" controls autoplay preload="auto">
-                        <source id="videoSource" src="https://zencdn.net" type="video/mp4">
-                        Ваш browser не поддерживает видео.
-                    </video>
+                    <!-- Заменили на вечный Rutube-плеер, который РАЗРЕШЕНО встраивать везде -->
+                    <iframe id="mainPlayer" src="https://rutube.ru" frameBorder="0" allow="clipboard-write; autoplay; fullscreen" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                 </div>
             </div>
             <div class="player-info">
-                <h2 id="currentVideoTitle">📺 Главный Экран Jetix TV</h2>
-                <p id="currentVideoDesc">Добро пожаловать в наш личный ностальгический кинотеатр! Чтобы запустить любимый мультсериал нашего детства, просто кликайте по карточкам в каталоге ниже!</p>
+                <h2 id="currentVideoTitle">¿ Что с Энди ? — 1 Серия (Маскарад)</h2>
+                <p id="currentVideoDesc">Ты смотришь легендарные проделки и розыгрыши Энди Ларкина в Ист-Гекле! Мультфильм играет прямо здесь, без рекламы и блокировок. Чтобы сменить сериал, кликай по карточкам в каталоге ниже.</p>
             </div>
         </section>
 
@@ -42,28 +39,18 @@
             <h2 class="section-title">Выбери мультфильм для брата</h2>
             
             <div class="series-grid">
-                <!-- Карточка 1: Наруто -->
-                <div class="series-card" onclick="changeVideo('https://googleapis.com', 'Наруто — 1 Серия', 'Включай первую серию культового аниме-сериала в оригинальной озвучке Jetix прямо здесь!')">
-                    <div class="card-image-fallback" style="background: linear-gradient(135deg, #ff6600, #ffcc00);">NARUTO</div>
-                    <div class="series-badge">Аниме</div>
-                    <div class="card-info">
-                        <h3>Наруто (Jetix)</h3>
-                        <p>Нажми для мгновенного запуска серии в плеере выше.</p>
-                    </div>
-                </div>
-
-                <!-- Карточка 2: Что с Энди? -->
-                <div class="series-card" onclick="changeVideo('https://googleapis.com', '¿ Что с Энди ? — 1 Серия (Маскарад)', 'Тот самый первый эпизод проделок Энди Ларкина в Ист-Гекле. Смотрим прямо на сайте!')">
+                <!-- Карточка 1: Что с Энди? -->
+                <div class="series-card" onclick="changeVideo('https://rutube.ru', '¿ Что с Энди ? — 1 Серия (Маскарад)', 'Легендарные проделки главного шутника Jetix прямо на твоем экране!')">
                     <div class="card-image-fallback" style="background: linear-gradient(135deg, #cc0066, #ff007f);">¿ЭНДИ?</div>
                     <div class="series-badge">Комедия</div>
                     <div class="card-info">
                         <h3>Что с Энди?</h3>
-                        <p>Легендарные розыгрыши главного шутника Jetix.</p>
+                        <p>Нажми для мгновенного запуска серии в плеере выше.</p>
                     </div>
                 </div>
 
-                <!-- Карточка 3: Человек-Паук -->
-                <div class="series-card" onclick="changeVideo('https://googleapis.com', 'Человек-Паук (1994) — 1 Серия (Ночь Ящерицы)', 'Культовый Паук из 90-х в оригинальном дубляже. Моментальный запуск!')">
+                <!-- Карточка 2: Человек-Паук -->
+                <div class="series-card" onclick="changeVideo('https://rutube.ru', 'Человек-Паук (1994) — 1 Серия (Ночь Ящерицы)', 'Тот самый культовый Паук из 90-х в оригинальном дубляже Jetix!')">
                     <div class="card-image-fallback" style="background: linear-gradient(135deg, #cc0000, #0033cc);">SPIDER-MAN</div>
                     <div class="series-badge">Экшен</div>
                     <div class="card-info">
@@ -72,8 +59,18 @@
                     </div>
                 </div>
 
+                <!-- Карточка 3: Наруто -->
+                <div class="series-card" onclick="changeVideo('https://rutube.ru', 'Наруто — 1 Серия', 'Самое начало пути Наруто Удзумаки в дубляже нашего детства!')">
+                    <div class="card-image-fallback" style="background: linear-gradient(135deg, #ff6600, #ffcc00);">NARUTO</div>
+                    <div class="series-badge">Аниме</div>
+                    <div class="card-info">
+                        <h3>Наруто (Jetix)</h3>
+                        <p>Первая серия культового аниме-сериала.</p>
+                    </div>
+                </div>
+
                 <!-- Карточка 4: Вуншпунш -->
-                <div class="series-card" onclick="changeVideo('https://googleapis.com', 'Вуншпунш — 1 Серия (Черная панк-магия)', 'Бубоник и Тирания пытаются наложить заклятие, а Мяурицио и Якоб спасают город!')">
+                <div class="series-card" onclick="changeVideo('https://rutube.ru', 'Вуншпунш — 1 Серия (Черная панк-магия)', 'Бубоник и Тирания пытаются наложить заклятие, а Мяурицио и Якоб спасают город!')">
                     <div class="card-image-fallback" style="background: linear-gradient(135deg, #660099, #4a0072);">WUNSHPUNSH</div>
                     <div class="series-badge">Магия</div>
                     <div class="card-info">
@@ -83,7 +80,7 @@
                 </div>
 
                 <!-- Карточка 5: Детки из класса 402 -->
-                <div class="series-card" onclick="changeVideo('https://googleapis.com', 'Детки из класса 402 — 1 Серия', 'Школьные приключения Нэнси, Джесси, Полли и Артура.')">
+                <div class="series-card" onclick="changeVideo('https://rutube.ru', 'Детки из класса 402 — 1 Серия', 'Школьные приключения Нэнси, Джесси, Полли и Артура.')">
                     <div class="card-image-fallback" style="background: linear-gradient(135deg, #0052cc, #002b80);">КЛАСС 402</div>
                     <div class="series-badge">Школа</div>
                     <div class="card-info">
@@ -102,29 +99,15 @@
     </footer>
 
     <script>
-        const defaultUrl = "https://zencdn.net";
+        const defaultUrl = "https://rutube.ru";
 
         function switchToDefault() {
-            changeVideo(defaultUrl, '📺 Главный Экран Jetix TV', 'Добро пожаловать в наш личный ностальгический кинотеатр! Чтобы запустить любимый мультсериал нашего детства, просто кликайте по карточкам в каталоге ниже!');
-            document.getElementById('mainPlayer').pause(); // Ставим на паузу стартовое видео
+            changeVideo(defaultUrl, '¿ Что с Энди ? — 1 Серия (Маскарад)', 'Ты смотришь легендарные проделки и розыгрыши Энди Ларкина! Мультфильм играет прямо здесь, без рекламы. Чтобы переключить сериал, кликай по карточкам в каталоге ниже.');
             document.querySelector('.nav-btn').classList.add('active');
         }
 
         function changeVideo(url, title, description) {
-            const player = document.getElementById('mainPlayer');
-            const source = document.getElementById('videoSource');
-            
-            source.src = url;
-            player.load(); // Перезагружаем видео-поток
-            
-            // Запускаем видео
-            const playPromise = player.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    console.log("Автозапуск заблокирован, нужен клик пользователя по плееру");
-                });
-            }
-            
+            document.getElementById('mainPlayer').src = url;
             document.getElementById('currentVideoTitle').innerText = title;
             document.getElementById('currentVideoDesc').innerText = description;
             

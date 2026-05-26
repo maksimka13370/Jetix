@@ -92,19 +92,20 @@ nav {
 }
 
 .player-frame {
-    width: 100%;
-    max-height: 520px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 пропорции */
+    height: 0;
     overflow: hidden;
     border-radius: 6px;
     background: #000;
 }
 
-/* Растягиваем тег video */
-.player-frame video {
+.player-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    display: block;
-    max-height: 520px;
+    height: 100%;
 }
 
 .player-info {
