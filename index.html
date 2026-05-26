@@ -24,45 +24,45 @@
         <section class="player-section">
             <div class="player-wrapper">
                 <div class="player-frame">
-                    <!-- Заменили на плейлист Jetix, который РАЗРЕШЕНО встраивать -->
-                    <iframe id="mainPlayer" src="https://youtube.com" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- Неубиваемый плеер VK, который запустится везде -->
+                    <iframe id="mainPlayer" src="https://vk.com" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="player-info">
-                <h2 id="currentVideoTitle">📺 Главный эфир JETIX 24/7</h2>
-                <p id="currentVideoDesc">Ты смотришь круглосуточный марафон любимых мультфильмов нашего детства. Если плеер не запустился автоматически, просто нажми на кнопку воспроизведения по центру экрана! Чтобы выбрать конкретный мультик, прокрути страницу вниз к каталогу.</p>
+                <h2 id="currentVideoTitle">📺 Главный марафон JETIX</h2>
+                <p id="currentVideoDesc">Добро пожаловать в онлайн-кинотеатр нашего детства! Нажмите на кнопку воспроизведения по центру экрана, чтобы начать просмотр. Чтобы переключиться на конкретный мультсериал, выберите его в каталоге ниже.</p>
             </div>
         </section>
 
         <!-- Раздел каталога мультиков вне трансляции -->
         <section id="catalog-section" class="section-padding">
-            <h2 class="section-title">Выбери мультфильм (Вне трансляции)</h2>
+            <h2 class="section-title">Выбери мультфильм для брата</h2>
             
             <div class="series-grid">
                 <!-- Карточка 1: Что с Энди? -->
-                <div class="series-card" onclick="changeVideo('https://youtube.com', 'Что с Энди? (Все серии)', 'Легендарные проделки и розыгрыши Энди Ларкина в Ист-Гекле. Включай и ностальгируй!')">
-                    <div class="card-image-fallback">¿ЭНДИ?</div>
+                <div class="series-card" onclick="changeVideo('https://vk.com', 'Что с Энди? (1 Серия)', 'Легендарные проделки и розыгрыши Энди Ларкина в Ист-Гекле. Включай и ностальгируй!')">
+                    <div class="card-image-fallback" style="background: linear-gradient(135deg, #cc0066, #ff007f);">¿ЭНДИ?</div>
                     <div class="series-badge">Комедия</div>
                     <h3>Что с Энди?</h3>
                 </div>
 
                 <!-- Карточка 2: Шаман Кинг -->
-                <div class="series-card" onclick="changeVideo('https://youtube.com', 'Шаман Кинг (Все серии)', 'Взгляни вокруг, оглянись назад... Приключения Йо Асакуры и его духа Амидамару на турнире шаманов!')">
-                    <div class="card-image-fallback" style="background: linear-gradient(45deg, #ff6600, #ffcc00);">SHAMAN KING</div>
+                <div class="series-card" onclick="changeVideo('https://vk.com', 'Шаман Кинг (1 Серия)', 'Взгляни вокруг, оглянись назад... Приключения Йо Асакуры и его духа Амидамару на турнире шаманов!')">
+                    <div class="card-image-fallback" style="background: linear-gradient(135deg, #ff6600, #ffcc00);">SHAMAN KING</div>
                     <div class="series-badge">Аниме</div>
                     <h3>Шаман Кинг</h3>
                 </div>
 
                 <!-- Карточка 3: Вуншпунш -->
-                <div class="series-card" onclick="changeVideo('https://youtube.com', 'Вуншпунш (Все серии)', 'Мяурицио и Якоб спасают город от безумных и комичных заклинаний злых колдунов Бубоника и Тирании.')">
-                    <div class="card-image-fallback" style="background: linear-gradient(45deg, #660099, #330066);">WUNSHPUNSH</div>
+                <div class="series-card" onclick="changeVideo('https://vk.com', 'Вуншпунш (1 Серия)', 'Мяурицио и Якоб спасают город от безумных и комичных заклинаний злых колдунов Бубоника и Тирании.')">
+                    <div class="card-image-fallback" style="background: linear-gradient(135deg, #660099, #4a0072);">WUNSHPUNSH</div>
                     <div class="series-badge">Магия</div>
                     <h3>Вуншпунш</h3>
                 </div>
 
                 <!-- Карточка 4: Жизнь с Луи -->
-                <div class="series-card" onclick="changeVideo('https://youtube.com', 'Жизнь с Луи (Все серии)', 'Трогательные, уморительные и жизненные истории из детства маленького Луи Андерсона и его незабываемого отца.')">
-                    <div class="card-image-fallback" style="background: linear-gradient(45deg, #0066cc, #003366);">ЛУИ</div>
+                <div class="series-card" onclick="changeVideo('https://vk.com', 'Жизнь с Луи (1 Серия)', 'Трогательные, уморительные и жизненные истории из детства маленького Луи Андерсона и его незабываемого отца.')">
+                    <div class="card-image-fallback" style="background: linear-gradient(135deg, #0052cc, #002b80);">ЛУИ</div>
                     <div class="series-badge">Семейный</div>
                     <h3>Жизнь с Луи</h3>
                 </div>
@@ -72,18 +72,18 @@
 
     <footer>
         <div class="container text-center">
-            <p>Jetix TV Portal © 2026. Сайт создан исключительно в ностальгических и развлекательных целях.</p>
+            <p>Jetix TV Portal © 2026. Сайт создан специально для любимого брата!</p>
         </div>
     </footer>
 
     <script>
-        // Ссылка на рабочий неубиваемый плейлист Jetix
-        const liveEmbedUrl = "https://youtube.com";
+        // Ссылка по умолчанию (Жизнь с Луи)
+        const defaultUrl = "https://vk.com";
 
         function switchToLive() {
-            document.getElementById('mainPlayer').src = liveEmbedUrl;
-            document.getElementById('currentVideoTitle').innerText = "📺 Главный эфир JETIX 24/7";
-            document.getElementById('currentVideoDesc').innerText = "Ты смотришь круглосуточный марафон любимых мультфильмов нашего детства. Если плеер не запустился автоматически, просто нажми на кнопку воспроизведения по центру экрана! Чтобы выбрать конкретный мультик, прокрути страницу вниз к каталогу.";
+            document.getElementById('mainPlayer').src = defaultUrl;
+            document.getElementById('currentVideoTitle').innerText = "📺 Главный марафон JETIX";
+            document.getElementById('currentVideoDesc').innerText = "Добро пожаловать в онлайн-кинотеатр нашего детства! Нажмите на кнопку воспроизведения по центру экрана, чтобы начать просмотр. Чтобы переключиться на конкретный мультсериал, выберите его в каталоге ниже.";
             document.querySelector('.nav-btn').classList.add('active');
         }
 
